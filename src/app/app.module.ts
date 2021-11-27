@@ -9,6 +9,9 @@ import { AppComponent } from './app.component';
 //Modulos
 import { PagesModule } from './pages/pages.module';
 import { RouterModule } from '@angular/router';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { environment } from 'src/environments/environment';
 
 
 @NgModule({
@@ -19,7 +22,10 @@ import { RouterModule } from '@angular/router';
     BrowserModule,
     RouterModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
