@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Data } from 'src/app/model/data';
+import { SavesService } from 'src/app/services/saves.service';
 
 @Component({
   selector: 'app-saves',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SavesComponent implements OnInit {
 
-  constructor() { }
+  datos:Data[] = [];
+
+  constructor(private savesService:SavesService) { }
 
   ngOnInit(): void {
+    this.savesService.getSaves().subscribe(response =>{
+      response.forEach(element => this.datos.push(<Data>element.payload.val()));
+      console.log(this.datos);
+    })
   }
 
 }

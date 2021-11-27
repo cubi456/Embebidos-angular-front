@@ -8,13 +8,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { SetupComponent } from './setup/setup.component';
 import { SavesComponent } from './saves/saves.component';
+import { TablaComponent } from "../components/tabla/tabla.component";
 
 @NgModule({
     declarations:[
         IndexComponent,
         PagesComponent,
         SetupComponent,
-        SavesComponent
+        SavesComponent,
+        TablaComponent
     ],
     exports:[
         IndexComponent,

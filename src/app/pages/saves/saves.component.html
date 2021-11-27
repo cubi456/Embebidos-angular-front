@@ -1,1 +1,5 @@
-<p>saves works!</p>
+<div class="row justify-content-center pt-5">
+  <div *ngFor="let dato of datos " class="col-lg-6 pt-3 pb-3 contenedor">
+    <app-tabla [data]="dato"></app-tabla>
+  </div>
+</div>
