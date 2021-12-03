@@ -9,6 +9,7 @@ import { Data } from 'src/app/model/data';
 export class TablaComponent implements OnInit {
 
   @Input("data") dataSnapshot:Data;
+  @Input("estadoTittle") estado:string;
 
   constructor() { }
 

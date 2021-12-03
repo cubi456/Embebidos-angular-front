@@ -33,8 +33,8 @@ export class SetupComponent implements OnInit {
   {
       let salida:Parametros = {
         humedad_ambiente_minima: this.formulario.value.humedadAmbienteMinima,
-        humedad_suelo_minima: this.formulario.value.humedadSueloMaxima,
-        humedad_suelo_maxima: this.formulario.value.humedadSueloMinima,
+        humedad_suelo_minima: this.formulario.value.humedadSueloMinima,
+        humedad_suelo_maxima: this.formulario.value.humedadSueloMaxima,
         temperatura_maxima: this.formulario.value.temperaturaMaxima
       }
       this.parametrosService.updateParametros(salida);
